@@ -1,0 +1,4 @@
+#仮想環境
+.venv_apitest
+#DS_Store
+.DS_Store
