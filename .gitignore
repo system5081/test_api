@@ -2,3 +2,5 @@
 .venv_apitest
 #DS_Store
 .DS_Store
+#seacretkey
+movie_api/local_settings.py
