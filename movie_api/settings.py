@@ -60,8 +60,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000"
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:3000",
+    "http://moviereact.system5081.com",
 ]
 
 ROOT_URLCONF = 'movie_api.urls'
@@ -148,7 +150,7 @@ AUTH_USER_MODEL = 'api.User'
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
-STATIC_URL = '/movie_api/static/'
+STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/movie_api/media/'
+MEDIA_URL = '/media/'
