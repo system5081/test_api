@@ -14,6 +14,8 @@ from pathlib import Path
 import os
 from datetime import timedelta
 
+from .local_settings import *
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -22,7 +24,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'og0#uk++(3*w6s#-h4$cwf%00)m^-8r-(*_475yl@_o%q!yt-q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -59,8 +60,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:8000"
+    "http://localhost:3000",
+    "http://moviereact.system5081.com",
 ]
 
 ROOT_URLCONF = 'movie_api.urls'
@@ -147,7 +150,7 @@ AUTH_USER_MODEL = 'api.User'
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
-STATIC_URL = '/movie_api/static/'
+STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/movie_api/media/'
+MEDIA_URL = '/media/'

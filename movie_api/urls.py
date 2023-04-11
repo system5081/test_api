@@ -21,9 +21,9 @@ from django.conf import settings
 from django.conf.urls import include
 
 urlpatterns = [
-    path('movie_api/admin/', admin.site.urls),
-    path('movie_api/api/', include('api.urls')),
-    path('movie_api/authen/',include('djoser.urls.jwt')),
+    path('admin/', admin.site.urls),
+    path('api/', include('api.urls')),
+    path('authen/',include('djoser.urls.jwt')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
