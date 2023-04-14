@@ -63,7 +63,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
-    "http://moviereact.system5081.com",
+    "https://moviereact.system5081.com",
 ]
 
 ROOT_URLCONF = 'movie_api.urls'
